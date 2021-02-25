@@ -98,7 +98,7 @@ public class ZooAnimalHelper {
 	public List<ZooAnimal> searchForAnimalByAnimal(String animal) {
 		EntityManager em = emfactory.createEntityManager();
 		em.getTransaction().begin();
-		TypedQuery<ZooAnimal> typedQuery = em.createNamedQuery("select za from ZooAnimal za where za.animal = :selectedAnimal", ZooAnimal.class);
+		TypedQuery<ZooAnimal> typedQuery = em.createQuery("select za from ZooAnimal za where za.animal = :selectedAnimal", ZooAnimal.class);
 		typedQuery.setParameter("selectedAnimal", animal);
 		
 		List<ZooAnimal> foundAnimals = typedQuery.getResultList();
