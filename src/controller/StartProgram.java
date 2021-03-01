@@ -49,13 +49,10 @@ public class StartProgram {
 
 	private static void deleteAnAnimal() {
 		// TODO Auto-generated method stub
-		System.out.print("Enter the animal to delete: ");
-		String animal = in.nextLine();
-		System.out.print("Enter the gender of the animal to delete: ");
-		String gender = in.nextLine();
-		System.out.print("Enter the age of the animal to delete: ");
-		int age = in.nextInt();
-		ZooAnimal toDelete = new ZooAnimal(animal, gender, age);
+		System.out.print("Enter the ID of the animal to delete: ");
+		int id = in.nextInt();
+		
+		ZooAnimal toDelete = zah.searchForAnimalById(id);
 		zah.deleteAnimal(toDelete);
 
 	}
