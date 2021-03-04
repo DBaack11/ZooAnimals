@@ -53,11 +53,9 @@ public class ZooAnimalHelper {
 	public void deleteAnimal(ZooAnimal toDelete) {
 		EntityManager em = emfactory.createEntityManager();
 		em.getTransaction().begin();
-		TypedQuery<ZooAnimal> typedQuery = em.createNamedQuery("select za from ZooAnimal za where za.animal = :selectedAnimal and za.gender = :selectedGender and za.age = :selectedAge", ZooAnimal.class);
+		TypedQuery<ZooAnimal> typedQuery = em.createQuery("select za from ZooAnimal za where za.id = :selectedID", ZooAnimal.class);
 	
-		typedQuery.setParameter("selectedAnimal", toDelete.getAnimal());
-		typedQuery.setParameter("selectedGender", toDelete.getGender());
-		typedQuery.setParameter("selectedAge", toDelete.getAge());
+		typedQuery.setParameter("selectedID", toDelete.getId());
 	
 		typedQuery.setMaxResults(1);
 		
@@ -92,13 +90,13 @@ public class ZooAnimalHelper {
 	}
 	
 	/**
-	 * @param storeName
+	 * @param animal
 	 * @return
 	 */
 	public List<ZooAnimal> searchForAnimalByAnimal(String animal) {
 		EntityManager em = emfactory.createEntityManager();
 		em.getTransaction().begin();
-		TypedQuery<ZooAnimal> typedQuery = em.createNamedQuery("select za from ZooAnimal za where za.animal = :selectedAnimal", ZooAnimal.class);
+		TypedQuery<ZooAnimal> typedQuery = em.createQuery("select za from ZooAnimal za where za.animal = :selectedAnimal", ZooAnimal.class);
 		typedQuery.setParameter("selectedAnimal", animal);
 		
 		List<ZooAnimal> foundAnimals = typedQuery.getResultList();
@@ -107,7 +105,7 @@ public class ZooAnimalHelper {
 	}
 
 	/**
-	 * @param itemName
+	 * @param gender
 	 * @return
 	 */
 	public List<ZooAnimal> searchForAnimalByGender(String gender) {
