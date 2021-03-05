@@ -5,13 +5,29 @@
 <title>Welcome to the Zoo</title>
 </head>
 <body style="background-color: tan;">
-<form action = "addAnimalServlet" method="post">
-<font size ="+2">Animal: <input type ="text" name = "animal"><br>
-Gender: <input type = "text" name = "gender"><br>
-Age: <input type = "number" name = "age"><br></font>
-<input type = "submit" value="Add Animal">
-</form> <br />
-<a href = "viewAllAnimalsServlet">View the complete list</a>
-
+	
+	<center>
+		<h1><strong><em><u>Welcome To The Zoo!</u></em></strong></h1>
+	
+	
+	<h2><strong><em><u>Animal Manager</u></em></strong></h2>
+	<form action = "addAnimalServlet" method="post">
+	<font size ="+2">Animal: <input type ="text" name = "animal"><br>
+	Gender: <input type = "text" name = "gender"><br>
+	Age: <input type = "number" name = "age"><br></font>
+	<input type = "submit" value="Add Animal">
+	</form> <br />
+	<a href = "viewAllAnimalsServlet">View the complete list</a><br>
+	
+	<h2><strong><em><u>Zookeeper Manager</u></em></strong></h2>
+	<form action = "addZooKeeperServlet" method="post">
+	<font size ="+2">Name: <input type ="text" name = "name"><br>
+	Department: <input type = "text" name = "department"><br>
+	</font>
+	<input type = "submit" value="Add Zookeeper">
+	</form> <br />
+	<a href = "viewAllZooKeepersServlet">View the complete list</a>
+	
+	</center>
 </body>
 </html>

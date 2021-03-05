@@ -2,11 +2,25 @@
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 	<persistence-unit name="ZooAnimals" transaction-type="RESOURCE_LOCAL">
 		<class>model.ZooAnimal</class>
+		<class>model.ZooKeeper</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://cis175.cxutl1zr2mps.us-east-1.rds.amazonaws.com/ZooAnimals"/>
 			<property name="javax.persistence.jdbc.user" value="admin"/>
 			<property name="javax.persistence.jdbc.password" value="baackaws"/>
+			
 		</properties>
 	</persistence-unit>
+	
+	<persistence-unit name="ZooKeepers" transaction-type="RESOURCE_LOCAL">
+		<class>model.ZooKeeper</class>
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://cis175.cxutl1zr2mps.us-east-1.rds.amazonaws.com/ZooKeepers"/>
+			<property name="javax.persistence.jdbc.user" value="admin"/>
+			<property name="javax.persistence.jdbc.password" value="baackaws"/>
+			
+		</properties>
+	</persistence-unit>
+	
 </persistence>
