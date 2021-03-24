@@ -8,6 +8,7 @@
 <title>Edit Animal</title>
 </head>
 <body style="background-color:tan;">
+	<h2><strong><em><u>Edit Animal</u></em></strong></h2>
 	<form action = "editAnimalServlet" method="post">
 	<font size="+2">Animal: <input type ="text" name = "animal" value= "${animalToEdit.animal}"><br>
 	Gender <input type = "text" name = "gender" value= "${animalToEdit.gender}"><br>

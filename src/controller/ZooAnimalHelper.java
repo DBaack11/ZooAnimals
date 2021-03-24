@@ -62,7 +62,9 @@ public class ZooAnimalHelper {
 		ZooAnimal result = typedQuery.getSingleResult();
 		
 		em.remove(result);
-		em.getTransaction().commit();
+
+		em.getTransaction().commit();;
+
 		em.close();
 	}
 	

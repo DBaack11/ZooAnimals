@@ -8,6 +8,7 @@
 <title>Animal List</title>
 </head>
 <body style="background-color:tan;">
+	<h2><strong><em><u>Animal List</u></em></strong></h2>
 	<form method = "post" action = "navigationServlet">
 	<table>
 	<c:forEach items="${requestScope.allAnimals}" var="currentanimal">
